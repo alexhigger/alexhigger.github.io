@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>springboot--异步传输与定时任务</title>
+    <title>github上传本地项目到git仓库的步骤</title>
+    <url>/2020/01/16/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0github%E6%AD%A5%E9%AA%A4/</url>
+    <content><![CDATA[<h1 id="Github的操作"><a href="#Github的操作" class="headerlink" title="Github的操作"></a>Github的操作</h1><ul>
+<li><p>github新建仓库</p>
+</li>
+<li><p>创建一个本地文件夹  // 本机已创好—F：/github</p>
+</li>
+<li><p>进入此文件夹，鼠标右击gitbash选项  </p>
+</li>
+<li><p>复制创建好仓库后的连接地址，输入命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;alexhigger&#x2F;xxxxx</span><br></pre></td></tr></table></figure></li>
+<li><p>会自动创建本地仓库，在其中添加项目(注意项目中只能有一个.git文件夹)</p>
+<blockquote>
+<p>$ cd xxxx  &emsp;&emsp;&emsp;&emsp;//进入本地仓库<br>$ git add xxxxx  &emsp;&emsp;&emsp;&emsp; //添加项目<br>$ git commit -m “xxxx”    &emsp;&emsp;&emsp;&emsp;//添加备注<br>$ git push origin master   &emsp;&emsp;&emsp;&emsp; //上传  </p>
+</blockquote>
+</li>
+<li><p>然后就自动上传好了</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>github</tag>
+        <tag>流程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue零碎笔记</title>
     <url>/2020/01/14/Vue%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="1、入门helloworld"><a href="#1、入门helloworld" class="headerlink" title="1、入门helloworld"></a>1、入门helloworld</h1><ul>
 <li><h2 id="1-1-准备工作："><a href="#1-1-准备工作：" class="headerlink" title="1.1 准备工作："></a>1.1 <strong><em>准备工作</em></strong>：</h2><ul>
