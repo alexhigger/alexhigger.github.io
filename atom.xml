@@ -3,7 +3,7 @@
   <title>Hexo</title>
   
   
-  <link href="hexo-blog/atom.xml" rel="self"/>
+  <link href="/hexo-blog/atom.xml" rel="self"/>
   
   <link href="http://alexhigger.gitee.io/hexo-blog/"/>
   <updated>2020-01-16T08:54:10.862Z</updated>
