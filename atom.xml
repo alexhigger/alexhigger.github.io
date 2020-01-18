@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://alexhigger.gitee.io/hexo-blog/"/>
   <updated>2020-01-18T13:43:11.927Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://alexhigger.gitee.io/hexo-blog/</id>
   
   <author>
     <name>alexhigger</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>vue组件化开发+bootstrap项目dashboard思路</title>
-    <link href="http://yoursite.com/2020/01/18/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
-    <id>http://yoursite.com/2020/01/18/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/</id>
+    <link href="http://alexhigger.gitee.io/hexo-blog/2020/01/18/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    <id>http://alexhigger.gitee.io/hexo-blog/2020/01/18/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/</id>
     <published>2020-01-18T13:45:27.581Z</published>
     <updated>2020-01-18T13:43:11.927Z</updated>
     
@@ -36,20 +36,20 @@
     
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://alexhigger.gitee.io/hexo-blog/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+      <category term="js" scheme="http://alexhigger.gitee.io/hexo-blog/tags/js/"/>
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+      <category term="vue" scheme="http://alexhigger.gitee.io/hexo-blog/tags/vue/"/>
     
-      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
+      <category term="bootstrap" scheme="http://alexhigger.gitee.io/hexo-blog/tags/bootstrap/"/>
     
   </entry>
   
   <entry>
     <title>github上传本地项目到git仓库的步骤</title>
-    <link href="http://yoursite.com/2020/01/16/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0github%E6%AD%A5%E9%AA%A4/"/>
-    <id>http://yoursite.com/2020/01/16/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0github%E6%AD%A5%E9%AA%A4/</id>
+    <link href="http://alexhigger.gitee.io/hexo-blog/2020/01/16/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0github%E6%AD%A5%E9%AA%A4/"/>
+    <id>http://alexhigger.gitee.io/hexo-blog/2020/01/16/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0github%E6%AD%A5%E9%AA%A4/</id>
     <published>2020-01-16T08:01:17.925Z</published>
     <updated>2020-01-16T08:54:10.862Z</updated>
     
@@ -69,16 +69,16 @@
     
     
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="http://alexhigger.gitee.io/hexo-blog/tags/github/"/>
     
-      <category term="流程" scheme="http://yoursite.com/tags/%E6%B5%81%E7%A8%8B/"/>
+      <category term="流程" scheme="http://alexhigger.gitee.io/hexo-blog/tags/%E6%B5%81%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>vue零碎笔记</title>
-    <link href="http://yoursite.com/2020/01/14/Vue%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2020/01/14/Vue%E7%AC%94%E8%AE%B0/</id>
+    <link href="http://alexhigger.gitee.io/hexo-blog/2020/01/14/Vue%E7%AC%94%E8%AE%B0/"/>
+    <id>http://alexhigger.gitee.io/hexo-blog/2020/01/14/Vue%E7%AC%94%E8%AE%B0/</id>
     <published>2020-01-13T16:55:00.000Z</published>
     <updated>2020-01-15T03:53:53.771Z</updated>
     
@@ -96,18 +96,18 @@
     
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://alexhigger.gitee.io/hexo-blog/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+      <category term="js" scheme="http://alexhigger.gitee.io/hexo-blog/tags/js/"/>
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+      <category term="vue" scheme="http://alexhigger.gitee.io/hexo-blog/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>springboot--异步传输与定时任务</title>
-    <link href="http://yoursite.com/2020/01/11/springboot%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
-    <id>http://yoursite.com/2020/01/11/springboot%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</id>
+    <link href="http://alexhigger.gitee.io/hexo-blog/2020/01/11/springboot%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+    <id>http://alexhigger.gitee.io/hexo-blog/2020/01/11/springboot%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</id>
     <published>2020-01-11T11:37:35.108Z</published>
     <updated>2020-01-13T16:54:57.469Z</updated>
     
@@ -125,18 +125,18 @@
     
     
     
-      <category term="springboot" scheme="http://yoursite.com/tags/springboot/"/>
+      <category term="springboot" scheme="http://alexhigger.gitee.io/hexo-blog/tags/springboot/"/>
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="java" scheme="http://alexhigger.gitee.io/hexo-blog/tags/java/"/>
     
-      <category term="后端" scheme="http://yoursite.com/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="http://alexhigger.gitee.io/hexo-blog/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/12/25/hello-world/"/>
-    <id>http://yoursite.com/2019/12/25/hello-world/</id>
+    <link href="http://alexhigger.gitee.io/hexo-blog/2019/12/25/hello-world/"/>
+    <id>http://alexhigger.gitee.io/hexo-blog/2019/12/25/hello-world/</id>
     <published>2019-12-25T15:24:39.801Z</published>
     <updated>2020-01-13T17:14:09.677Z</updated>
     
@@ -153,14 +153,14 @@
     
     
     
-      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://alexhigger.gitee.io/hexo-blog/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>我的第一篇博客文章</title>
-    <link href="http://yoursite.com/2019/12/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>http://yoursite.com/2019/12/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
+    <link href="http://alexhigger.gitee.io/hexo-blog/2019/12/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <id>http://alexhigger.gitee.io/hexo-blog/2019/12/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
     <published>2019-12-22T08:27:06.000Z</published>
     <updated>2020-01-13T17:14:21.253Z</updated>
     
@@ -179,7 +179,7 @@
     
     
     
-      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://alexhigger.gitee.io/hexo-blog/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
