@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>vue-组件通信</title>
+    <url>/2020/01/19/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h2 id="组件间通信规则"><a href="#组件间通信规则" class="headerlink" title="组件间通信规则"></a>组件间通信规则</h2><ol>
+<li>不要在子组件中直接修改父组件传递的数据</li>
+<li>数据初始化时，应当看初始化的数据是否用于多个组件中，如果需要被用于多个组件中，则初始化在父组件<br>中；如果只在一个组件中使用，那就初始化在这个要使用的组件中。</li>
+<li>数据初始化在哪个组件, 更新数据的方法(函数)就应该定义在哪个组件。</li>
+</ol>
+<hr>
+<h1 id="组件间通信方式"><a href="#组件间通信方式" class="headerlink" title="组件间通信方式"></a>组件间通信方式</h1><h2 id="props-父组件向子组件传递数据"><a href="#props-父组件向子组件传递数据" class="headerlink" title="props 父组件向子组件传递数据"></a>props 父组件向子组件传递数据</h2><ul>
+<li>在声明组件对象中使用 props 选项指定<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> MyComponent = &#123;</span><br><span class="line">    template: <span class="string">'&lt;div&gt;&lt;/div&gt;'</span>,</span><br><span class="line">    props: <span class="comment">//此处值有以下3种方式,</span></span><br><span class="line">    components: &#123;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+方式1：指定传递属性名，注意是 数组形式<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">props: [<span class="string">'id'</span>,<span class="string">'name'</span>，<span class="string">'salary'</span>, <span class="string">'isPublished'</span>, <span class="string">'commentIds'</span>, <span class="string">'author'</span>, <span class="string">'getEmp'</span>]</span><br></pre></td></tr></table></figure>
+方式2：指定传递属性名和数据类型，注意是 对象形式<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">props: &#123;</span><br><span class="line">    id: <span class="built_in">Number</span>,</span><br><span class="line">    name: <span class="built_in">String</span>,</span><br><span class="line">    salary: <span class="built_in">Number</span>,</span><br><span class="line">    isPublished: <span class="built_in">Boolean</span>,</span><br><span class="line">    commentIds: <span class="built_in">Array</span>,</span><br><span class="line">    author: <span class="built_in">Object</span>,</span><br><span class="line">    getEmp: <span class="built_in">Function</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+方式3：指定属性名、数据类型、必要性、默认值<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">props: &#123;</span><br><span class="line">name: &#123;</span><br><span class="line">type: <span class="built_in">String</span>,</span><br><span class="line">required: <span class="literal">true</span>,</span><br><span class="line"><span class="keyword">default</span>: <span class="string">'mxg'</span></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>引用组件时动态赋值<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-bind:id</span>=<span class="string">"2"</span> <span class="attr">:name</span>=<span class="string">"meng"</span> <span class="attr">:salary</span>=<span class="string">"9999"</span> <span class="attr">:is-published</span>=<span class="string">"true"</span> <span class="attr">:commentids</span>=<span class="string">"[1, 2]"</span> <span class="attr">:author</span>=<span class="string">"&#123;name: 'alan'&#125;"</span> <span class="attr">:get-emp</span>=<span class="string">"getEmp"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>传递数据注意</li>
+</ul>
+<ol>
+<li>props 只用于父组件向子组件传递数据</li>
+<li>所有标签属性都会成为组件对象的属性, 模板页面可以直接引用</li>
+<li>问题  <ul>
+<li>如果需要向非子后代传递数据，必须多层逐层传递</li>
+<li>兄弟组件间也不能直接 props 通信, 必须借助父组件才可以</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="emit-自定义事件"><a href="#emit-自定义事件" class="headerlink" title="$emit 自定义事件"></a>$emit 自定义事件</h2><p>作用：通过 自定义事件 来代替 props 传入函数形式</p>
+<ul>
+<li>绑定自定义事件<br>在父组件中定义事件监听函数，并引用子组件标签上 v-on 绑定事件监听。<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">    // 通过 v-on 绑定</span><br><span class="line">// @自定义事件名=事件监听函数</span><br><span class="line">// 在子组件 dashboard 中触发 delete_hobby 事件来调用 deleteHobby 函数</span><br><span class="line"><span class="tag">&lt;<span class="name">dashboard</span> @<span class="attr">delete_hobby</span>=<span class="string">"deleteHobby"</span>&gt;</span><span class="tag">&lt;/<span class="name">dashboard</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>触发监听事件函数执行<br>在子组件中触发父组件的监听事件函数调用<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">    <span class="comment">// 子组件触发事件函数调用</span></span><br><span class="line"><span class="comment">// this.$emit(自定义事件名, data)</span></span><br><span class="line"><span class="keyword">this</span>.$emit(<span class="string">'delete_emp'</span>, index)</span><br></pre></td></tr></table></figure></li>
+<li>自定义事件注意</li>
+</ul>
+<ol>
+<li>自定义事件只用于子组件向父组件发送消息(数据)</li>
+<li>隔代组件或兄弟组件间通信此种方式不合适<h2 id="slot-插槽分发内容"><a href="#slot-插槽分发内容" class="headerlink" title="slot 插槽分发内容"></a>slot 插槽分发内容</h2>作用: 主要用于父组件向子组件传递 标签+数据 , （而上面prop和自定事件只是传递数据）<br>场景：一般是某个位置需要经常动态切换显示效果（如饿了么）下图所示<br><img src="https://i.loli.net/2020/01/19/EKripjOLw2kJCS5.png" alt="QQ图片20200119193236.png">  </li>
+</ol>
+<ul>
+<li>子组件定义插槽<br>在子组件中定义插槽, 当父组件向指定插槽传递标签数据后, 插槽处就被渲染，否则插槽处不会被渲染.<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- name属性值指定唯一插槽名，父组件通过此名指定标签数据--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"aaa"</span>&gt;</span>不确定的标签结构 1<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>组件确定的标签结构<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"bbb"</span>&gt;</span>不确定的标签结构 2<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>父组件传递标签数据<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;child&gt;</span><br><span class="line">    &lt;!--slot属性值对应子组件中的插槽的name属性值--&gt;</span><br><span class="line">    &lt;div slot=<span class="string">"aaa"</span>&gt;向 name=aaa 的插槽处插入此标签数据&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div slot="bbb"&gt;向 name=bbb 的插槽处插入此标签数据&lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/child&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>插槽注意事项</li>
+</ul>
+<ol>
+<li>只能用于父组件向子组件传递 标签+数据</li>
+<li>传递的插槽标签中的数据处理都需要定义所在父组件中</li>
+</ol>
+<h2 id="非父子组件间通信PubSubJS库"><a href="#非父子组件间通信PubSubJS库" class="headerlink" title="非父子组件间通信PubSubJS库"></a>非父子组件间通信PubSubJS库</h2><p>Vue.js可通过PubSubJs库来实现非父子组件之间的通信，使用 PubsubJS的消息发布与订阅模<br>据的传递。<br>理解:订阅信息==== 绑定事件监听, 发布消息====触发事件。<br>注意:但是必须先执行订阅事件subscribe , 然后才能publish发布事件。</p>
+<ul>
+<li>订阅消息（绑定事件监听）<br>先在created钩子函数中订阅消息<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">created() &#123;                     <span class="comment">//event接收的是消息名称，data接收发布时传递的数据</span></span><br><span class="line">          PubSub.subscribe(<span class="string">'消息名称（事件名）'</span>, (event,data) =&gt; &#123; <span class="comment">//箭头函数</span></span><br><span class="line">              <span class="comment">//事件回调处理</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure></li>
+<li>发布消息（触发事件）<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">PubSub.publish( <span class="string">'消息名称（事件名）'</span>,data)</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+        <tag>js</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue组件化开发+bootstrap项目dashboard思路</title>
     <url>/2020/01/18/vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/</url>
     <content><![CDATA[<h2 id="vue组件化开发"><a href="#vue组件化开发" class="headerlink" title="vue组件化开发"></a>vue组件化开发</h2><p>组件（component） 是 Vue.js 最强大的功能之一。<br>Vue 中的组件化开发就是把网页的重复代码抽取出来 ，封装成一个个可复用的视图组件，然后将这些视图组件拼接<br>到一块就构成了一个完整的系统。这种方式非常灵活，可以极大的提高我们开发和维护的效率。<br>通常一套系统会以一棵嵌套的组件树的形式来组织：  </p>
@@ -107,7 +165,7 @@
   </entry>
   <entry>
     <title>vue零碎笔记</title>
-    <url>/2020/01/14/Vue%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/01/14/Vue%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/</url>
     <content><![CDATA[<h1 id="1、入门helloworld"><a href="#1、入门helloworld" class="headerlink" title="1、入门helloworld"></a>1、入门helloworld</h1><ul>
 <li><h2 id="1-1-准备工作："><a href="#1-1-准备工作：" class="headerlink" title="1.1 准备工作："></a>1.1 <strong><em>准备工作</em></strong>：</h2><ul>
 <li>在目录下安装vue  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install vue@2.6.10</span><br></pre></td></tr></table></figure></li>
