@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-19T14:17:17.729Z</updated>
+  <updated>2020-01-30T06:12:42.603Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>restful风格架构编程</title>
+    <link href="http://yoursite.com/2020/01/29/restful%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/"/>
+    <id>http://yoursite.com/2020/01/29/restful%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/</id>
+    <published>2020-01-29T15:16:00.000Z</published>
+    <updated>2020-01-30T06:12:42.603Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Restful-架构"><a href="#Restful-架构" class="headerlink" title="Restful 架构:"></a>Restful 架构:</h1><p>使用GET、POST、PUT、DELETE4个表示操作方式的动词对服务端资源进行操作：  </p><ul><li>GET用来获取资源  </li><li>POST用来新建资源（也可以用于更新资源）  </li><li>PUT用来更新资源  </li><li>DELETE用来删除资源；  </li></ul><table><thead><tr><th></th><th>传统</th><th>restful</th></tr></thead><tbody><tr><td>列表查询</td><td>getMemberList</td><td>member/list— GET</td></tr><tr><td>查询</td><td>getMember?id=xxx</td><td>member/{id} — GET</td></tr><tr><td>添加</td><td>addMember?xxx</td><td>member — POST</td></tr><tr><td>修改</td><td>updateMember?id=xxx</td><td>member/{id} — PUT</td></tr><tr><td>删除</td><td>deleteMember?id=xxx</td><td>member/{id} — PUT</td></tr><tr><td># 项目使用restful风格</td><td></td><td></td></tr></tbody></table><table><thead><tr><th>项目功能</th><th>请求URI</th><th>请求方式</th></tr></thead><tbody><tr><td>查询所有会员</td><td>member/list</td><td>GET</td></tr><tr><td>查询某位会员信息</td><td>member/{id}</td><td>GET</td></tr><tr><td>添加会员</td><td>member</td><td>POST</td></tr><tr><td>前往修改页面（查出会员信息进行信息回显）</td><td>member/{id}</td><td>GET</td></tr><tr><td>修改会员</td><td>member/{id}</td><td>PUT</td></tr><tr><td>删除会员</td><td>member/{id}</td><td>DELETE</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Restful-架构&quot;&gt;&lt;a href=&quot;#Restful-架构&quot; class=&quot;headerlink&quot; title=&quot;Restful 架构:&quot;&gt;&lt;/a&gt;Restful 架构:&lt;/h1&gt;&lt;p&gt;使用GET、POST、PUT、DELETE4个表示操作方式的动词对服务端
+      
+    
+    </summary>
+    
+    
+    
+      <category term="restful" scheme="http://yoursite.com/tags/restful/"/>
+    
+      <category term="架构" scheme="http://yoursite.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>vue-组件通信</title>
